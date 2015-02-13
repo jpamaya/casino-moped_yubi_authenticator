@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'casino/moped_authenticator/version'
+require 'casino/moped_yubi_authenticator/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'casino-moped_authenticator'
-  s.version     = CASino::MopedAuthenticator::VERSION
-  s.authors     = ['Gergo Sulymosi']
-  s.email       = ['gergo@digitalnatives.hu']
-  s.homepage    = 'http://rbcas.org/'
+  s.name        = 'casino-moped_yubi_authenticator'
+  s.version     = CASino::MopedYubiAuthenticator::VERSION
+  s.authors     = ['Juan Pablo Amaya']
+  s.email       = ['jpa.amaya@codescrum.codescrum']
+  s.homepage    = 'http://www.codescrum.com/'
   s.license     = 'MIT'
-  s.summary     = 'Provides mechanism to use Moped as an authenticator for CASino.'
-  s.description = 'This gem can be used to allow the CASino backend to authenticate against an MongoDB server using Moped.'
+  s.summary     = 'Provides mechanism to use Moped Yubi as an authenticator for CASino.'
+  s.description = 'This gem can be used to allow the CASino backend to authenticate Yubi keys against an MongoDB server using Moped.'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -22,9 +22,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov', '~> 0.7'
   s.add_development_dependency 'coveralls'
 
-  s.add_runtime_dependency 'moped', '~> 1.5'
-  s.add_runtime_dependency 'unix-crypt', '~> 1.1'
-  s.add_runtime_dependency 'bcrypt', '~> 3.0'
-  s.add_runtime_dependency 'casino', '~> 2.0'
-  s.add_runtime_dependency 'phpass-ruby', '~> 0.1'
+  s.add_runtime_dependency 'casino-moped_authenticator'
 end

@@ -1,5 +1,5 @@
 module CASino
-  class MopedAuthenticator
+  class MopedYubiAuthenticator
     VERSION = '0.1.1'
   end
 end

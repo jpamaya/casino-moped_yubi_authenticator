@@ -1,19 +1,18 @@
-# casino-moped_authenticator
-[![Build Status](https://travis-ci.org/digitalnatives/casino-moped_authenticator.svg?branch=master)](https://travis-ci.org/digitalnatives/casino-moped_authenticator)
-[![Coverage Status](https://img.shields.io/coveralls/digitalnatives/casino-moped_authenticator.svg)](https://coveralls.io/r/digitalnatives/casino-moped_authenticator?branch=master)
+# casino-moped_yubi_authenticator
 
-Provides mechanism to use Moped/Mongoid as an authenticator for [CASino](https://github.com/rbCAS/CASino).
+Provides mechanism to use Moped/Mongoid as an authenticator for Yubi keys in [CASino](https://github.com/rbCAS/CASino).
 
-To use the Moped authenticator, configure it in your cas.yml:
+To use the Moped Yubi authenticator, configure it in your cas.yml:
 
     authenticators:
       my_company_mongo:
-        authenticator: "Moped"
+        authenticator: "MopedYubi"
         options:
           database_url: "mongodb://localhost:27017/my_db"
           collection: "users"
           username_column: "username"
           password_column: "password"
+          yubi_key_column: "registered_yubi_key"
           pepper: "suffix of the password" # optional
           extra_attributes:
             email: "email_database_column"
